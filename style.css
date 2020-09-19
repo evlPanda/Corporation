@@ -1,0 +1,38 @@
+body {
+  padding-top: 5rem;
+  background-color: #383838;
+  color: #ccc;
+}
+.starter-template {
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+H1 {
+  color: #54C769;
+}
+
+.bg-grey {
+  background-color: #383838 !important;
+}
+
+.bg-green {
+  background-color: #54C769;
+}
+
+.bg-blue {
+  background-color: #01C0F5;
+}
+
+.bg-yellow {
+  background-color: #D4AF37;
+}
+
+.bg-red {
+  background-color: #D64631;
+}
+
+/* change the link color */
+.navbar-custom .navbar-nav .nav-link {
+    color: rgba(255,255,255,1);
+}
