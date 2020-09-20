@@ -11,7 +11,7 @@
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/starter-template/">
 
     <!-- Bootstrap core CSS -->
-    <link href="assets/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="../assets/dist/css/bootstrap.css" rel="stylesheet">
 
     <style>
       .bd-placeholder-img {
@@ -30,11 +30,11 @@
       }
     </style>
     <!-- Custom styles for this template -->
-    <link href="style.css" rel="stylesheet">
+    <link href="../style.css" rel="stylesheet">
   </head>
   <body>
     <nav class="navbar navbar-expand-md navbar-dark bg-blue fixed-top">
-      <a class="navbar-brand" href="index.html">Home</a>
+      <a class="navbar-brand" href="../index.html">Corporation.bat</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -45,31 +45,50 @@
             <div class="dropdown-menu" aria-labelledby="dropdown01">
               <a class="dropdown-item" href="about.html">About</a>
               <a class="dropdown-item" href="page1.html">Page 1</a>
-              <a class="dropdown-item" href="page2.html">Page 2</a>
+              <a class="dropdown-item" href="slideshow.html">Slideshow</a>
             </div>
           </li>
         </ul>
-        <!--
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-          <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-        </form>
-        -->
       </div>
     </nav>
 
     <main role="main" class="container">
 
       <div class="starter-template">
-        <h1>Page 2</h1>
-        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
+        <h1>Slideshow</h1>
+        <img class="mySlides" width="1000px" src="../images/inGame1.jpg">
+        <img class="mySlides" width="1000px" src="../images/inGame2.jpg">
+        <img class="mySlides" width="1000px" src="../images/inGame3.png">
+        <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+        <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
       </div>
 
     </main><!-- /.container -->
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script>window.jQuery || document.write('<script src="assets/dist/js/jquery.slim.min.js"><\/script>')</script>
-    <script src="assets/dist/js/bootstrap.bundle.js"></script>
+    <script src="../assets/dist/js/bootstrap.bundle.js"></script>
+
+    <!-- Slideshow JavaScript: https://www.w3schools.com/w3css/w3css_slideshow.asp -->
+    <script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
+
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      if (n > x.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = x.length} ;
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      x[slideIndex-1].style.display = "block";
+    }
+    </script>
 
   </body>
 </html>

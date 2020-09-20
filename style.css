@@ -36,3 +36,11 @@ H1 {
 .navbar-custom .navbar-nav .nav-link {
     color: rgba(255,255,255,1);
 }
+
+.lead {
+  text-align: left;
+}
+
+.dropdown-menu {
+  background-color: #D64631;
+}
